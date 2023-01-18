@@ -1,0 +1,24 @@
+<h1>Eventos</h1>
+<button [disabled]="btnDisabled">Enviar</button>
+<button (click)="toggleButton()">Toogle Button</button>
+<p>Edad {{person.age}}</p>
+<p>{{person.name}}</p>
+<button (click)="agePlus()">Edad++</button>
+
+<div class="box" (scroll)="onScroll($event)">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil obcaecati aliquam id, mollitia tempora labore unde,
+    aspernatur non cum adipisci earum quia in voluptates voluptatem temporibus commodi assumenda voluptatum deserunt?
+  </p>
+</div>
+
+
+<input type="text" [value]="person.name" (keyup)="changeName($event)"/>
+
+
+<progress max="100" [value]="person.age"></progress>
+
+<hr>
+<h1>Hola mundo</h1>
+<h2>{{'Hola Mundo '.repeat(5)}}</h2>
+<p>3 + 3 = {{3 + 3}}</p>
+<h3>Hola, soy {{name}} y tengo {{age}}</h3>
