@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -6,30 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  name = 'Nicolas';
-  age = 50;
-  btnDisabled = true;
-
-  person = {
-    name: "Nico",
-    age: 20
+  onLoaded() {
+    console.log('log padre');
   }
 
-  toggleButton() {
-    this.btnDisabled = !this.btnDisabled;
-  }
-  agePlus() {
-    this.person.age++;
-  }
-
-  onScroll(event: Event) {
-    const element = event.target as HTMLElement;
-    console.log(element.scrollTop);
-  }
-
-  changeName(event: Event) {
-    const element = event.target as HTMLInputElement;
-    this.person.name = element.value;
-  }
+  imgParent = '';
 
 }
